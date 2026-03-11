@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday Tanya 🎂</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+overflow:hidden;
+}
+
+h1{
+margin-top:60px;
+font-size:50px;
+}
+
+p{
+font-size:22px;
+width:70%;
+margin:auto;
+}
+
+.gallery{
+margin-top:40px;
+}
+
+.gallery img{
+width:170px;
+height:170px;
+object-fit:cover;
+border-radius:20px;
+margin:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:25px;
+background:white;
+color:#ff4b7d;
+cursor:pointer;
+margin-top:30px;
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:24px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+100%{transform:translateY(-100vh);}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🎂 Happy Birthday Tanya 🎂</h1>
+
+<p>
+Today is special because someone amazing was born.  
+May your day be filled with happiness, smiles, and beautiful moments.
+</p>
+
+<h2>From Shourya ❤️</h2>
+
+<button onclick="showMessage()">Click for Surprise 🎁</button>
+
+<div class="gallery">
+<h2>Memories 📸</h2>
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+
+</div>
+
+<audio autoplay loop>
+<source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function showMessage(){
+alert("Happy Birthday Tanya 🎉 You are truly special!");
+}
+
+function createHeart(){
+let heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(20+Math.random()*20)+"px";
+document.body.appendChild(heart);
+
+setTimeout(()=>{heart.remove();},6000);
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+  </html>
